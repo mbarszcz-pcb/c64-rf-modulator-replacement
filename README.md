@@ -3,7 +3,10 @@ C64 Composite/S-Video RF Modulator Replacement
 
 <img src="./images/c64-rf-modulator-render-top.PNG" width=400px>
 
-<img src="./images/c64-rf-modulator-render-bottom.PNG" width=400px>
+## Quick Links
+* [Schematic](../pdf/c64-rf-modulator-replacement-schematic.pdf)
+
+* [Gerber Files](../gerbers)
 
 # Introduction 
 This is my version of a C64 RF Modulator replacement based on the schematics of similar designs by Zero-X/OMS and JMP$FCE2.  This board can be used to replace a damaged or defective RF modulator in your C64, to improve the sharpness of your video output, or as a modern solution to replace the Composite/Luma/Chroma output functionality of the original modulator on new motherboards such as the SixtyClone or bwack’s KU-14194.
@@ -16,6 +19,8 @@ This design has a few goals that set it apart from the others:
 3.	It provides high quality S-Video (Y/C) output while maintaining composite video output for compatibility
 
 4.	It provides adjustable luma/chroma output levels to fine tune the s-video signal.  This allow for the best possible compatibility with a wide variety of different board revisions, VIC chips, aging components and monitors.  Adjustable levels means this board can also be used with s-video cables with or without an inline resistor to eliminate “checkerboarding” caused by too high of a chroma level.
+
+
 
 # Compatibility
 This RF modulator replacement is compatible with motherboard revisions 250407, 250425 250466 and 250469.  I have not tested it, but I believe it should be compatible with Bwack’s KU-14194 board as well since it uses the standard longboard RF modulator.  It is not compatible however with the early revision 326298-01 boards with the 5 Pin AV Output.  This board revision only uses a different modulator pin layout, but the video signals are not combined in the modulator.  Instead they are processed discrete components inside the VIC-II can.
