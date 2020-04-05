@@ -1,7 +1,11 @@
 # c64-rf-modulator-replacement
 C64 Composite/S-Video RF Modulator Replacement
 
-#Introduction 
+<img src="./images/c64-rf-modulator-render-top.PNG" width=400px>
+
+<img src="./images/c64-rf-modulator-render-bottom.PNG" width=400px>
+
+# Introduction 
 This is my version of a C64 RF Modulator replacement based on the schematics of similar designs by Zero-X/OMS and JMP$FCE2.  This board can be used to replace a damaged or defective RF modulator in your C64, to improve the sharpness of your video output, or as a modern solution to replace the Composite/Luma/Chroma output functionality of the original modulator on new motherboards such as the SixtyClone or bwack’s KU-14194.
 
 This design has a few goals that set it apart from the others:
@@ -13,7 +17,7 @@ This design has a few goals that set it apart from the others:
 
 4.	It provides adjustable luma/chroma output levels to fine tune the s-video signal.  This allow for the best possible compatibility with a wide variety of different board revisions, VIC chips, aging components and monitors.  Adjustable levels means this board can also be used with s-video cables with or without an inline resistor to eliminate “checkerboarding” caused by too high of a chroma level.
 
-#Compatibility
+# Compatibility
 This RF modulator replacement is compatible with motherboard revisions 250407, 250425 250466 and 250469.  I have not tested it, but I believe it should be compatible with Bwack’s KU-14194 board as well since it uses the standard longboard RF modulator.  It is not compatible however with the early revision 326298-01 boards with the 5 Pin AV Output.  This board revision only uses a different modulator pin layout, but the video signals are not combined in the modulator.  Instead they are processed discrete components inside the VIC-II can.
 
 Gathering the components
@@ -21,37 +25,42 @@ Kicad files are available for you to view or modify as you see fit, and gerber f
 
 I strongly recommend building the entire board, but if choose to do so, there are a few components that be omitted in different situations to decrease the cost at the expense of features and flexibility.
 
-##Trimmers
+## Trimmers
 The trim pots used to adjust the luma and chroma are the most expensive components in this project.  I highly recommend using them but if you choose you may jumper the solder bridges on the back of the board to bypass the trimmer pads and install 150 Ohm resistors for R4 and R7.  This won’t give the precision adjustment of the trimmers but will be close enough for most configurations.  You can experiment with different fixed value resistors between 100-1K Ohm if you want to change fixed output levels.
 
-##No Composite Video
+## No Composite Video
 I have not seen any improvement in s-video quality from omitting the composite video components, but if you really don’t want composite output, L2, R8, R11, and C6 can be omitted from the build.
 
-##No Voltage Regulator
+## No Voltage Regulator
 If you are only ever going to use the RF modulator replacement on a C64C 250469 short board, you don’t need the voltage regulator or the input/output capacitors since 5V is provided directly to the modulator on pin 1.  This means you can omit C3, C5, C7, C8, and U1 from the build.
 
-#Building the board
+# Building the board
 Once you have your PCBs and all your components, soldering them together should be pretty straightforward.  You can use the schematic or the BOM to place the right value parts in the right place.  From a soldering standpoint, is easiest to assemble the components starting with the lowest profile first and then working your way up.  This would be mean soldering the resistors and inductor first, then the ceramic caps, the diode, electrolytic capacitors, transistors and voltage regulator, and finally the jumper block.  The jumpers can then be installed on the headers as appropriate.  Finish off by removing the flux residue with some cotton swabs or a brush and isopropyl alcohol.
 
-#Installing the board
+# Installing the board
 First you need to remove the old RF modulator.  This can be a bit tricky as the large metal can will suck the heat right out of the iron.  I can’t help you much here, but I can only suggest to use a soldering iron with plenty of heat, a wide tip, to take your time, and don’t rip off any traces.  The new board can then be installed one of two ways: 
 
 The first is soldering it directly to the motherboard.  For this you can solder two .1” pin headers into the motherboard (making sure they are straight) and then setting the RF modulator replacement down on top of them.  I recommend sticking small rubber feet near the rear of the board to help support it.   You can slide two feet under the front of the to keep the board level and evenly spaced all the way around while you solder the headers from the top side.  Trim the excess length of the header pins off and slide out the rubber feet.  For a nicer finish, re-flow the solder joints after you have trimmed them.
 
 Alternatively, you can make the replacement a bit more modular by soldering two 4-pin female headers on the motherboard and two 4-pin male headers on the RF modulator replacement.  This will allow you to easily plug and unplug the modulator.  It is not required but as the board will be approximately ½” above the motherboard and “hanging” on the headers, you may want to use some rubber feet, foam, or double sided tape as spacer to support the back of the board.
 
-#Adjustments
+# Adjustments
 
-##Jumper Settings
+## Jumper Settings
 Adjustment of the jumpers routes the signals to the proper pinout for the motherboard you are, switches the correct pull-up resistor for the VIC-II luma, and enables or disables the use of an onboard 5V regulator.
 
 With all jumpers in the up position, the board is configured for use on the 12V C64 “longboards” (250407, 250425, and 250466).  In this configuration the 5V regulator is used to regulate the 9V Unregulated power on pin 1 down to 5V.
+<img src="./images/jumpers-up.png" width=200px>
 
 With all jumpers in the down position, the board is configured for use on the 250469  “shortboard” commonly found in the C64C.  In this configuration the 5V input on pin 1 is used directly in the circuit, without the need for the 5V regulator.
+<img src="./images/jumpers-dn.png" width=200px>
 
 For most configurations the jumpers should be either all up or all down, however if you understand what you are doing and want to run a 5V 856x VIC-II from a short board in a 12V long board, there is one jumper that you may want to run in a non-standard configuration.  First you MUST isolate pin 13 on the VIC-II socket from the VIC-II (the short board outputs 12V there while an 856x is expecting 5V).  Pin 13 on the VIC-II can then be soldered over to pin 40 (which is 5V).  I recommend not modifying the VIC-II chips but instead using a piggyback socket or PCB.  With a standard machined pin socket, simply trim off leg 13 and solder a jumper wire from leg 13 to 40.  The 856x VIC-II can then just plug into the socket without any damaging modifications.  Once the VIC-II is installed, the jumpers on the RF modulator should be in the following configuration to use the correct 1K pullup resistor:
 
-##Adjusting the Output Level
+<img src="./images/jumpers-856x.png" width=200px> 	
+  
+
+## Adjusting the Output Level
 If you choose to include adjustable potentiometers in you build, a counter-clockwise adjustment on the Luma (Y) and Chroma (C) potentiometers will reduce the output level.  A clockwise adjustment will increase the output level.  My recommendation is to to start with both adjustments fully counter clockwise and increase as necessary.  The levels can be set with a scope or simply “by eye” depending on the tools you have available.
 
 An Ideal chroma signal should be ~300mV Peak to Peak.  The adjustment on the board should allow you to adjust it from approximately ~250mV - 1.7V,  This range allows you to dial back the output for use with a standard s-video cable or to turn it up to compensate for the cables with an the inline 330-1K resistor.  Some monitors don't care if the signal is too hot, others will give an ugly checkered pattern (especially LCDs).   If you don’t have a an oscilloscope to measure the peak to peak voltage, start with the chroma pot fully counter-clockwise and increase it until the colors are sufficiently saturated.  If you go too far, the image will begin to look “grainy” or have a checkerboard pattern.
@@ -60,8 +69,7 @@ An ideal luma signal should be 1V PP (including the sync pulse). Depending on th
 
 Composite video output remains at a fixed output level regardless of the Y and C adjustment pots.
 
-#Changelog
-
+# Changelog
 Rev A – Prototype 1
 
 Rev B – Initial production revision
