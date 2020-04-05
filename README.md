@@ -29,8 +29,8 @@ This design has a few goals that set it apart from the others:
 # Compatibility
 This RF modulator replacement is compatible with motherboard revisions 250407, 250425 250466 and 250469.  I have not tested it, but I believe it should be compatible with Bwack’s KU-14194 board as well since it uses the standard longboard RF modulator.  It is not compatible however with the early revision 326298-01 boards with the 5 Pin AV Output.  This board revision only uses a different modulator pin layout, but the video signals are not combined in the modulator.  Instead they are processed discrete components inside the VIC-II can.
 
-Gathering the components
-Kicad files are available for you to view or modify as you see fit, and gerber files for this project are available that can be uploaded to your favorite PCB fab to make your own boards.  A complete Bill of Materials (BOM) is listed below with example parts from Digikey.  At the time of writing this, the components cost about $12 USD, not including the PCB or shipping.
+# Gathering the components
+Kicad files are available for you to view or modify as you see fit, and gerber files for this project are available that can be uploaded to your favorite PCB fab to make your own boards.  A complete Bill of Materials (BOM) can be found [here](c64-rf-modulator-replacement-bom.xlsx) with example part numbers from Digikey.  At the time of writing this, the components cost about $12 USD, not including the PCB or shipping.
 
 I strongly recommend building the entire board, but if choose to do so, there are a few components that be omitted in different situations to decrease the cost at the expense of features and flexibility.
 
@@ -45,6 +45,8 @@ If you are only ever going to use the RF modulator replacement on a C64C 250469 
 
 # Building the board
 Once you have your PCBs and all your components, soldering them together should be pretty straightforward.  You can use the schematic or the BOM to place the right value parts in the right place.  From a soldering standpoint, is easiest to assemble the components starting with the lowest profile first and then working your way up.  This would be mean soldering the resistors and inductor first, then the ceramic caps, the diode, electrolytic capacitors, transistors and voltage regulator, and finally the jumper block.  The jumpers can then be installed on the headers as appropriate.  Finish off by removing the flux residue with some cotton swabs or a brush and isopropyl alcohol.
+
+
 
 # Installing the board
 First you need to remove the old RF modulator.  This can be a bit tricky as the large metal can will suck the heat right out of the iron.  I can’t help you much here, but I can only suggest to use a soldering iron with plenty of heat, a wide tip, to take your time, and don’t rip off any traces.  The new board can then be installed one of two ways: 
