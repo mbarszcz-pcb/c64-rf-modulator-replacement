@@ -83,8 +83,8 @@ Officially, an ideal luma signal should be 1V PP (including the sync pulse). Dep
 Composite video output remains at a fixed output level regardless of the Y and C adjustment pots.
 
 # Changelog
-Rev A – Prototype 1
+Rev A – 2020-03-15 - Prototype 1
 
-Rev B – Initial production revision
+Rev B – 2020-03-25 - Initial production revision, fixed schematic bugs, tweaked values and removed unnecessary components to improve picture quality
 
-Rev C – Tweaked positioning of several traces, vias, and regulator U1 to improve physical spacing.  Adjusted silkscreen layer.  Electrically identical to rev B.
+Rev C – 2020-04-05 - Adjusted positioning of several traces, vias, and regulator U1 to improve physical spacing.  Changed RV1 and RV2 for "W" footprint trimmers with inline legs due to parts availability.  Swapped R4 and R5 physical locations to better accomodate new pin configuration
