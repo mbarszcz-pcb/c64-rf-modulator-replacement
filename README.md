@@ -1,7 +1,7 @@
 # c64-rf-modulator-replacement
 C64 Composite/S-Video RF Modulator Replacement
 
-<img src="./images/c64-rf-modulator-render-top.PNG" width=400px>
+<img src="./images/c64-rf-modulator-render-diagonal.PNG" width=400px>
 
 ## Quick Links
 * [Schematic](pdf/c64-rf-modulator-replacement-schematic.pdf)
