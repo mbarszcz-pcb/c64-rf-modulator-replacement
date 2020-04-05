@@ -8,6 +8,10 @@ C64 Composite/S-Video RF Modulator Replacement
 
 * [Gerber Files](../gerbers)
 
+* [PCB Renderings](../images/pcb)
+
+* [Photos of a completed RF Modulator Replacement and Video Output](../images/photos)
+
 # Introduction 
 This is my version of a C64 RF Modulator replacement based on the schematics of similar designs by Zero-X/OMS and JMP$FCE2.  This board can be used to replace a damaged or defective RF modulator in your C64, to improve the sharpness of your video output, or as a modern solution to replace the Composite/Luma/Chroma output functionality of the original modulator on new motherboards such as the SixtyClone or bwack’s KU-14194.
 
