@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "C64 RF Modulator Replacement"
 Date "2020-04-07"
-Rev "C"
+Rev "D"
 Comp "mbarszcz-pcb"
 Comment1 ""
 Comment2 ""
