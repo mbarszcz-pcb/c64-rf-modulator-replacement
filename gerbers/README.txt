@@ -1,6 +1,6 @@
 Always use the latest revision PCB.
 
-"-gerbers-jlc.zip" is the same PCB but with JLCJLCJLC on the B. Silkscreen layer for JLCPCB unique ID during board production.  Be sure to select "specify a location" when ordering from JLCPCB.
+"-gerbers-jlc.zip" is the same PCB but with JLCJLCJLC on the B Silkscreen layer for unique ID during board production.  Be sure to select "specify a location" when ordering from JLCPCB.
 
 Recommended board values:
 	PCB Thickness: 1.6mm
