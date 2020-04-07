@@ -85,3 +85,5 @@ Rev A – 2020-03-15 - Prototype 1
 Rev B – 2020-03-25 - Initial production revision, fixed schematic bugs, tweaked values and removed unnecessary components to improve picture quality
 
 Rev C – 2020-04-05 - Adjusted positioning of several traces, vias, and regulator U1 to improve physical spacing. Changed RV1 and RV2 for "W" footprint trimmers with inline legs due to parts availability. Swapped R4 and R5 physical locations to better accomodate the new pin configuration
+
+Rev D – 2020-04-07 - Adjusted power and ground trace thickness, added additional vias, added custom trimmer footprint to ID proper placement, optimized ground pours, increased chroma/luma/power trace isolation

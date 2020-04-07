@@ -5,7 +5,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "C64 RF Modulator Replacement"
-Date "2020-04-05"
+Date "2020-04-07"
 Rev "C"
 Comp "mbarszcz-pcb"
 Comment1 ""
@@ -636,7 +636,7 @@ U 1 1 5EAA98F2
 P 8725 2525
 F 0 "RV1" V 8625 2525 50  0000 C CNN
 F 1 "1K" V 8725 2525 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 8725 2525 50  0001 C CNN
+F 2 "C64 RF Modulator Replacement:Potentiometer_Bourns_3296W_Vertical" H 8725 2525 50  0001 C CNN
 F 3 "~" H 8725 2525 50  0001 C CNN
 	1    8725 2525
 	0    -1   -1   0   
@@ -708,7 +708,7 @@ U 1 1 5E931ED5
 P 8225 4000
 F 0 "RV2" V 8125 4000 50  0000 C CNN
 F 1 "220" V 8220 4000 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 8225 4000 50  0001 C CNN
+F 2 "C64 RF Modulator Replacement:Potentiometer_Bourns_3296W_Vertical" H 8225 4000 50  0001 C CNN
 F 3 "~" H 8225 4000 50  0001 C CNN
 	1    8225 4000
 	0    -1   -1   0   
