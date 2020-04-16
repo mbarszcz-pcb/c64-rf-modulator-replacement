@@ -27,7 +27,7 @@ This design has a few goals that set it apart from the others:
 
 
 # Compatibility
-This RF modulator replacement is compatible with motherboard revisions 250407, 250425, 250466, and 250469, and both NTSC and PAL VIC-II chips. I have not tested it, but I believe it should also be compatible with Bwack's KU-14194 board as well since it uses the standard longboard RF modulator. It is not compatible, however, with the early revision 326298-01 boards with the 5 Pin AV Output. This revision uses a different modulator pin layout, and the video signals are not combined in the modulator. They are instead processed with discrete components inside the VIC-II can .
+This RF modulator replacement is compatible with motherboard revisions 250407, 250425, 250466, and 250469, and both NTSC and PAL VIC-II chips. I have not tested it, but I believe it should also be compatible with Bwack's KU-14194 board as well since it uses the standard longboard RF modulator. It is not compatible, however, with the early revision 326298-01 boards with the 5 Pin AV Output. This revision uses a different modulator pin layout, and the video signals are not combined in the modulator. They are instead processed with discrete components inside the VIC-II can.
 
 # Gathering the components
 Kicad files are available for you to view or modify as you see fit. Gerber files are available that can be uploaded directly to your favorite PCB fab to make your own boards, and a complete Bill of Materials (BOM) can be found [here](c64-rf-modulator-replacement-bom.xlsx) with example parts from Digikey. At the time of writing this, the components cost about $12 US, not including the PCB or shipping.
@@ -75,12 +75,12 @@ If you choose to include adjustable potentiometers in your build, a counter-cloc
 
 An ideal chroma signal should be ~300mV peak-to-peak. The adjustment on the board should allow you to adjust it from approximately ~250mV - 1.7V. This range allows you to dial back the output for use with a standard S-video cable or to turn it up to compensate for the cables with the inline 330-1K resistor. Some monitors don't care if the signal is too hot, others will give you an ugly checkered pattern (especially LCDs). If you don't have an oscilloscope to measure the peak-to-peak voltage, start with the chroma pot fully counter-clockwise and increase it until the colors are sufficiently saturated. If you go too far, the image will begin to look “grainy” or have a checkerboard pattern.
 
-Officially, an ideal luma signal should be 1V PP (including the sync pulse). Depending on the output of the VIC-II chip you are using, the adjustment on the board should allow you to adjust it from approximately ~575mV-1.5V PP. The original breadbins output a signal around 1.2V PP, while the later C64Cs were closer to an “in-spec” 1V PP. On some monitors though 1V PP can look too look dark (requiring you to turn up the contrast on your monitor). If using a scope, I would adjust it to approximately 1.1V PP, if adjusting by eye, starting low and increasing until the light blue text is reasonably legible against the dark blue background. If the border and text start to look “white” you have gone too far. Another good test on a CRT is white text on a black background. If the white text is blooming, you should back the signal off. The effect will be very similar to having the contrast set too high.
+Officially, an ideal luma signal should be 1V PP (including the sync pulse). Depending on the output of the VIC-II chip you are using, the adjustment on the board should allow you to adjust it from approximately ~575mV-1.5V PP. The original breadbins output a signal around 1.2V PP, while the later C64Cs were closer to an “in-spec” 1V PP. On some monitors though 1V PP can look too look dark (requiring you to turn up the contrast on your monitor). If using a scope, I would adjust it to approximately 1.1V PP.  If adjusting by eye, start  low and increase the level until the light blue text is reasonably legible against the dark blue background. If the border and text start to look “white” you have gone too far. Another good test on a CRT is white text on a black background. If the white text is blooming, you should back the signal off. The effect will be very similar to having the contrast set too high.
 
 Composite video output remains at a fixed output level regardless of the Y and C adjustment pots.
 
 # Changelog
-Rev A – 2020-03-15 - Prototype 1
+Rev A – 2020-03-15 - Prototype
 
 Rev B – 2020-03-25 - Initial production revision, fixed schematic bugs, tweaked values and removed unnecessary components to improve picture quality
 
