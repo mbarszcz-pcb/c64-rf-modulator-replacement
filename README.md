@@ -57,7 +57,7 @@ Alternatively, you can make the replacement a bit more modular by soldering two 
 # Adjustments
 
 ## Configuring the mainboard
-If you are using the longboard (Rev 250407, 250425, 240441, 250466) it is important to make sure the G.PAL/I.PAL jumper by the modulator is SHORTED, or the ground pin the modulator replacement attached to will be floating.
+If you are using the longboard (Rev 250407, 250425, 240441, 250466) it is important to make sure the G.PAL/I.PAL jumper by the modulator is SHORTED, or the ground pin the modulator replacement attaches to will be floating and will not work correctly.  You can validate this by checking continity between the left most RF modulator through-hole on the C64 motherboard and a suitable ground point on the C64 motherboard (Cartridge shield, plated edge of the moatherboard, 5V Regulator heatsink, etc).  If the modulator is installed, you can also check continutiy between the bottom left pin on the jumper block and a suitable ground point.
 
 ## Jumper Settings
 The adjustment of the jumpers routes the signals to the proper pinout for the motherboard you are using, switches the correct pull-up resistor for the VIC-II luma, and enables or disables the use of an onboard 5V regulator.With all jumpers in the up position, the board is configured for use on the 12V C64 “longboards” (250407, 250425, and 250466). In this configuration, the 5V regulator is used to regulate the 9V Unregulated power on pin 1 down to 5V
@@ -81,6 +81,9 @@ An ideal chroma signal should be ~300mV peak-to-peak. The adjustment on the boar
 Officially, an ideal luma signal should be 1V PP (including the sync pulse). Depending on the output of the VIC-II chip you are using, the adjustment on the board should allow you to adjust it from approximately ~575mV-1.5V PP. The original breadbins output a signal around 1.2V PP, while the later C64Cs were closer to an “in-spec” 1V PP. On some monitors though 1V PP can look too look dark (requiring you to turn up the contrast on your monitor). If using a scope, I would adjust it to approximately 1.1V PP.  If adjusting by eye, start  low and increase the level until the light blue text is reasonably legible against the dark blue background. If the border and text start to look “white” you have gone too far. Another good test on a CRT is white text on a black background. If the white text is blooming, you should back the signal off. The effect will be very similar to having the contrast set too high.
 
 Composite video output remains at a fixed output level regardless of the Y and C adjustment pots.
+
+# A note on use with LCD Monitors and Checkerboarding
+If you are still getting checkerboarding even after adjusting the potentiometers, try soldering a 330pF Resistor (you can experiement with different values to see what works best with your setup) across R3 (the resistor on the top right corner of the board).  There seems to be a degree of variablility regarding different A->D Converter cirtuitry used in different brands of LCD monitors and in devices like the RetroTink2X or OSSC that makes their displays more or less susceptable to checkerboarding.  From what I've been able to see, CRT monitors are not susceptable to this behavior.
 
 # Changelog
 Rev A – 2020-03-15 - Prototype
