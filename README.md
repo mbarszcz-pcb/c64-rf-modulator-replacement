@@ -56,6 +56,9 @@ Alternatively, you can make the replacement a bit more modular by soldering two 
 
 # Adjustments
 
+## Configuring the mainboard
+If you are using the longboard (Rev 250407, 250425, 240441, 250466) it is important to make sure the G.PAL/I.PAL jumper by the modulator is SHORTED, or the ground pin the modulator replacement attached to will be floating.
+
 ## Jumper Settings
 The adjustment of the jumpers routes the signals to the proper pinout for the motherboard you are using, switches the correct pull-up resistor for the VIC-II luma, and enables or disables the use of an onboard 5V regulator.With all jumpers in the up position, the board is configured for use on the 12V C64 “longboards” (250407, 250425, and 250466). In this configuration, the 5V regulator is used to regulate the 9V Unregulated power on pin 1 down to 5V
 
