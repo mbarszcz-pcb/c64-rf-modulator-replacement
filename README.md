@@ -83,7 +83,7 @@ Officially, an ideal luma signal should be 1V PP (including the sync pulse). Dep
 Composite video output remains at a fixed output level regardless of the Y and C adjustment pots.
 
 # A note on use with LCD Monitors and Checkerboarding
-If you are still getting checkerboarding even after adjusting the potentiometers, try soldering a 330pF Resistor (you can experiement with different values to see what works best with your setup) across R3 (the resistor on the top right corner of the board).  There seems to be a degree of variablility regarding different A->D Converter cirtuitry used in different brands of LCD monitors and in devices like the RetroTink2X or OSSC that makes their displays more or less susceptable to checkerboarding.  From what I've been able to see, CRT monitors are not susceptable to this behavior.
+If you are still getting checkerboarding even after adjusting the potentiometers, try soldering a 330pF Resistor (you can experiement with different values to see what works best with your setup) across R3 (the resistor on the top right corner of the board).  This combines with R3 to create an RC filter that seems to help eliminate this.  There seems to be a degree of variablility regarding different A->D conversion cirtuitry used in different brands of LCD monitors and in devices like the RetroTink2X or OSSC that makes some displays more susceptable to checkerboarding.  From what I've been able to see, CRT monitors are not susceptable to this behavior.
 
 # Changelog
 Rev A – 2020-03-15 - Prototype
